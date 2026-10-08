@@ -1,0 +1,7 @@
+# 自動生成・出力ファイルや大容量動画を除外
+output.txt
+transcribe.py
+*.MP4
+*.mp4
+__Pycache__/
+uploads/
