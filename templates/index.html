@@ -56,8 +56,36 @@
 
         {% if result_text %}
         <h2>--- 文字起こし結果 ---</h2>
+
         <textarea readonly>{{ result_text }}</textarea>
         {% endif %}
+
+        <!-- ⬇️ 【追加】 保存ボタン -->
+         <br>
+         <button tpye="button" onclick="downloadText()" style="margin-top: 10px;">テキストファイル（.txt）で保存</button>
     </div>
+
+    <!-- ⬇️ 【追加】JavaScript処理 -->
+    <script>
+    function downloadText() {
+        const textarea =document.querySelector('textarea');
+        if (!textarea || !textarea.value.trim()) {
+            alert('保存するテキストがありません');
+            return;
+        }
+
+        const blob = new Blob([textarea.value], { type: 'text/plain;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'transcription_result.txt';
+        document.body.appendChild(a);
+        a.click();
+
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+    </script>
 </body>
 </html>
