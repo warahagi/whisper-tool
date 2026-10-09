@@ -70,6 +70,7 @@ python app.py
 　本アプリは Python（Flask）および重い機械学習モデル（OpenAI Whisper）、音声処理ライブラリ（ffmpeg）を使用するため、ローカル環境での実行を想定しています。
 - **GitHub Pages での直接実行不可**
   GitHub Pages などの静的サイトホスティングでは Python サーバーが動作しないため、Web上で直接動作させることはできません。
+  ※GitHub Pagesで直接 `index.html` を閲覧した場合は、Flaskのテンプレート構文（`{{ result_text }}` 等）が表示されたままの仕様になります。
 - **公開環境で動作させる場合**
   オンライン上で公開・試用可能にする場合は、Render、PythonAnywhere、Fly.io などの Python / ffmpeg が動作するクラウドプラットフォーム（Paas）へのデプロイが必要です。
 
