@@ -1,6 +1,9 @@
 # 🎬動画文字起こし＆音声編集アシスタント（Whisper Transcriber）
 動画編集時の音声素材作成やテロップ合わせを効率化するために開発した、Flask + OpenAi Whisper ベースのローカルWebアプリケーションです。
 
+## 🚀 デモ画面（GitHub Pages）
+[👉 ウィスパーツールの画面を開く](https://warahagi.github.io/whisper-tool/templates/)
+
 ---
 
 ## 💡 開発のきっかけ
